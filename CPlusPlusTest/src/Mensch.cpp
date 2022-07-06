@@ -9,15 +9,15 @@
 #include "../hed/Mensch.h"
 #include "../hed/Helper.h"
 
-Mensch::Mensch(const std::string name_,const int x_, const int y_, const int speed_) 
-	: name(name_), x(x_), y(y_), speed(speed_) {}
+Mensch::Mensch(std::string name,const int x, const int y, const int speed) 
+	: mName(name), mX(x), mY(y), mSpeed(speed) {}
 
 void Mensch::Move(const int xa ,const int ya) {
-	x += xa * speed;
-	y += ya * speed;
+	mX += xa * mSpeed;
+	mY += ya * mSpeed;
 }
 std::string Mensch::ToString() const {
-	std::string toReturn = std::format("name: {} / x: {} / y: {} / speed: {}", name, x, y, speed);
+	std::string toReturn = std::format("name: {} / x: {} / y: {} / speed: {}", mName, mX, mY, mSpeed);
 	return toReturn;
 }
 

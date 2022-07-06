@@ -16,7 +16,7 @@ public:
 	};
 
 private:
-	LogLevel m_LogLevel = LevelInfo;
+	LogLevel mLogLevel = LevelInfo;
 
 public:
 	void SetLevel(LogLevel Level);

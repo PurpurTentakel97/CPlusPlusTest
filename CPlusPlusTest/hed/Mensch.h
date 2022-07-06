@@ -10,14 +10,14 @@
 
 class Mensch {
 public:
-	Mensch(std::string name_, int x_, int y_, int speed_);
+	Mensch(std::string name, int x, int y, int speed);
 	void Move(int xa, int ya);
 	std::string ToString() const;
 
 private:
-	std::string name;
-	int x, y;
-	int speed;
+	std::string mName;
+	int mX, mY;
+	int mSpeed;
 };
 
 void MoveAndPrintMenschMultiple(Mensch& mensch, std::array<int,10> xs, std::array<int,10> ys);
