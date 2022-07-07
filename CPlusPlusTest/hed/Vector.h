@@ -31,6 +31,7 @@ struct dVector3 : public IVector3 {
 	std::string ToString()const override;
 	double GetLength()const override;
 	dVector3 Normalize()const override;
+
 	dVector3 operator+(const dVector3& other)const;
 	dVector3 operator+(const iVector3& other)const;
 	dVector3 operator-(const dVector3& other)const;
@@ -39,11 +40,13 @@ struct dVector3 : public IVector3 {
 	dVector3 operator*(const iVector3& other)const;
 	dVector3 operator/(const dVector3& other)const;
 	dVector3 operator/(const iVector3& other)const;
+
 	dVector3 operator*(int i)const;
 	dVector3 operator*(double i)const;
 	dVector3 operator/(int i)const;
 	dVector3 operator/(double i)const;
 };
+
 struct iVector3 : public IVector3 {
 	int x, y, z;
 
@@ -52,6 +55,7 @@ struct iVector3 : public IVector3 {
 	std::string ToString()const override;
 	double GetLength()const override;
 	dVector3 Normalize()const override;
+
 	iVector3 operator+(const iVector3& other)const;
 	dVector3 operator+(const dVector3& other)const;
 	iVector3 operator-(const iVector3& other)const;
@@ -60,11 +64,11 @@ struct iVector3 : public IVector3 {
 	dVector3 operator*(const dVector3& other)const;
 	dVector3 operator/(const iVector3& other)const;
 	dVector3 operator/(const dVector3& other)const;
+
 	iVector3 operator*(int i)const;
 	dVector3 operator*(double i)const;
 	dVector3 operator/(int i)const;
 	dVector3 operator/(double i)const;
-
 };
 
 
@@ -76,6 +80,7 @@ struct dVector2 : public IVector2 {
 	std::string ToString()const override;
 	double GetLength()const override;
 	dVector2 Normalize()const override;
+
 	dVector2 operator+(const iVector2& other)const;
 	dVector2 operator+(const dVector2& other)const;
 	dVector2 operator-(const iVector2& other)const;
@@ -84,11 +89,13 @@ struct dVector2 : public IVector2 {
 	dVector2 operator*(const dVector2& other)const;
 	dVector2 operator/(const iVector2& other)const;
 	dVector2 operator/(const dVector2& other)const;
+
 	dVector2 operator*(int i)const;
 	dVector2 operator*(double i)const;
 	dVector2 operator/(int i)const;
 	dVector2 operator/(double i)const;
 };
+
 struct iVector2 : public IVector2 {
 	int x, y;
 
@@ -97,6 +104,7 @@ struct iVector2 : public IVector2 {
 	std::string ToString()const override;
 	double GetLength()const override;
 	dVector2 Normalize()const override;
+
 	iVector2 operator+(const iVector2& other)const;
 	dVector2 operator+(const dVector2& other)const;
 	iVector2 operator-(const iVector2& other)const;
@@ -105,6 +113,7 @@ struct iVector2 : public IVector2 {
 	dVector2 operator*(const dVector2& other)const;
 	dVector2 operator/(const iVector2& other)const;
 	dVector2 operator/(const dVector2& other)const;
+
 	iVector2 operator*(int i)const;
 	dVector2 operator*(double i)const;
 	dVector2 operator/(int i)const;
