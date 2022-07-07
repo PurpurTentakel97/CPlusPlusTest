@@ -11,7 +11,9 @@ int Add(int a, int b);
 int Multiply(int a, int b);
 void MultiplyAndLog(int a, int b);
 
+struct iVector3;
 struct dVector3;
+struct iVentor2;
 struct dVector2;
 
 struct IVector {
@@ -31,18 +33,34 @@ struct dVector3 : public IVector3 {
 
 	dVector3(double X, double Y, double Z);
 
-	std::string ToString() const override;
-	double GetLength() const override;
-	dVector3 Normalize() const override;
+	std::string ToString()const override;
+	double GetLength()const override;
+	dVector3 Normalize()const override;
+	dVector3 operator+(dVector3& other)const;
+	dVector3 operator+(iVector3& other)const;
+	dVector3 operator-(dVector3& other)const;
+	dVector3 operator-(iVector3& other)const;
+	dVector3 operator*(dVector3& other)const;
+	dVector3 operator*(iVector3& other)const;
+	dVector3 operator/(dVector3& other)const;
+	dVector3 operator/(iVector3& other)const;
 };
 struct iVector3 : public IVector3 {
 	int x, y, z;
 
 	iVector3(int X, int Y, int Z);
 
-	std::string ToString() const override;
-	double GetLength() const override ;
-	dVector3 Normalize() const override;
+	std::string ToString()const override;
+	double GetLength()const override ;
+	dVector3 Normalize()const override;
+	iVector3 operator+(iVector3& other)const;
+	dVector3 operator+(dVector3& other)const;
+	iVector3 operator-(iVector3& other)const;
+	dVector3 operator-(dVector3& other)const;
+	iVector3 operator*(iVector3& other)const;
+	dVector3 operator*(dVector3& other)const;
+	dVector3 operator/(dVector3& other)const;
+	dVector3 operator/(iVector3& other)const;
 };
 
 
@@ -51,17 +69,17 @@ struct dVector2 : public IVector2 {
 
 	dVector2(double X, double Y);
 
-	std::string ToString() const override;
-	double GetLength() const override;
-	dVector2 Normalize() const override;
+	std::string ToString()const override;
+	double GetLength()const override;
+	dVector2 Normalize()const override;
 };
 struct iVector2 : public IVector2 {
 	int x, y;
 
 	iVector2(int X, int Y);
 
-	std::string ToString() const override;
-	double GetLength() const override;
-	dVector2 Normalize() const override;
+	std::string ToString()const override;
+	double GetLength()const override;
+	dVector2 Normalize()const override;
 };
 

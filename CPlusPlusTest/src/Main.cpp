@@ -7,10 +7,9 @@
 #include "../hed/Helper.h"
 #include "../hed/Calculate.h"
 
+std::string breakStr = "---------------------------------------------------------------------------";
 
 void Vector() {
-	std::string breakStr = "---------------------------------------------------------------------------";
-
 	iVector3 iVec3(2, 5, 7);
 	Print("iVec3");
 	Print(iVec3.ToString());
@@ -55,6 +54,37 @@ void Vector() {
 	Print(dVec2N.GetLength());
 }
 
+void CalculateVector() {
+	Print("iVector3");
+	iVector3 ivec1_1(1, 2, 3);
+	Print(ivec1_1.ToString());
+	iVector3 ivec2_1(5, 7, 9);
+	Print(ivec2_1.ToString());
+	iVector3 ivecr1_1 = ivec1_1 + ivec2_1;
+	Print(ivecr1_1.ToString());
+	iVector3 ivecr2_1 = ivec1_1 - ivec2_1;
+	Print(ivecr2_1.ToString());
+	iVector3 ivecr3_1 = ivec1_1 * ivec2_1;
+	Print(ivecr3_1.ToString());
+	dVector3 ivecr4_1 = ivec1_1 / ivec2_1;
+	Print(ivecr4_1.ToString());
+
+	Print(breakStr);
+
+	Print("iVector3 + dVector3");
+	iVector3 ivec1_2(1, 2, 3);
+	Print(ivec1_2.ToString());
+	dVector3 dvec2_2(5.6, 7.3, 9.7);
+	Print(dvec2_2.ToString());
+	dVector3 dvecr1_2 = ivec1_2 + dvec2_2;
+	Print(dvecr1_2.ToString());
+	dVector3 dvecr2_2 = ivec1_2 - dvec2_2;
+	Print(dvecr2_2.ToString());
+	dVector3 dvecr3_2 = ivec1_2 * dvec2_2;
+	Print(dvecr3_2.ToString());
+	dVector3 dvecr4_2 = ivec1_2 / dvec2_2;
+	Print(dvecr4_2.ToString());
+}
 int main() {
-	Vector();
+	CalculateVector();
 }
