@@ -7,6 +7,7 @@
 #include "../hed/Helper.h"
 #include <format>
 
+// Log
 void Log::SetLevel(const LogLevel level) {
 	mLogLevel = level;
 }

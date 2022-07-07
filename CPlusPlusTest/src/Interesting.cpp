@@ -14,7 +14,7 @@ void Sizes() {
 	Print("long long", sizeof(long long));
 	Print("long int", sizeof(long int));
 	Print("float", sizeof(float));
-	Print("long float", sizeof(long float));
+	//Print("long float", sizeof(long float));
 	Print("double", sizeof(double));
 	Print("long double", sizeof(long double));
 }

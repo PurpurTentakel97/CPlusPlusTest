@@ -7,6 +7,7 @@
 #include <string>
 
 void Print(int numberToPrint);
+void Print(double numberToPrint);
 void Print(const std::string& stringToPrint);
 
 void Print(const std::string& message, int number);

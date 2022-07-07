@@ -11,6 +11,9 @@
 void Print(const int numberToPrint) {
 	std::cout << numberToPrint << std::endl;
 }
+void Print(const double numberToPrint) {
+	std::cout << numberToPrint << std::endl;
+}
 void Print(const std::string& stringToPrint) {
 	std::cout << stringToPrint << std::endl;
 }

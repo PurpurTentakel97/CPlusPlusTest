@@ -9,6 +9,7 @@
 #include "../hed/Mensch.h"
 #include "../hed/Helper.h"
 
+// Mensch
 Mensch::Mensch(std::string name,const int x, const int y, const int speed) 
 	: mName(name), mX(x), mY(y), mSpeed(speed) {}
 
@@ -22,6 +23,7 @@ std::string Mensch::ToString() const {
 }
 
 
+// Free
 void MoveAndPrintMenschMultiple(Mensch& mensch, const std::array<int,10> xs, const std::array<int,10> ys) {
 	if (xs.size() != ys.size()) {
 		Print("Length of Xas != Length if Yas");
