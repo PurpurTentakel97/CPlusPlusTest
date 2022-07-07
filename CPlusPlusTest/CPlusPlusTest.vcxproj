@@ -150,6 +150,7 @@
     <ClCompile Include="src\Log.cpp" />
     <ClCompile Include="src\Main.cpp" />
     <ClCompile Include="src\Mensch.cpp" />
+    <ClCompile Include="src\Vector.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="hed\Calculate.h" />
@@ -157,6 +158,7 @@
     <ClInclude Include="hed\Interesting.h" />
     <ClInclude Include="hed\Log.h" />
     <ClInclude Include="hed\Mensch.h" />
+    <ClInclude Include="hed\Vector.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

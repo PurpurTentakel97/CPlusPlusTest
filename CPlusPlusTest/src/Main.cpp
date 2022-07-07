@@ -5,7 +5,8 @@
 //
 
 #include "../hed/Helper.h"
-#include "../hed/Calculate.h"
+#include "../hed/Vector.h"
+#include <format>
 
 std::string breakStr = "---------------------------------------------------------------------------";
 
@@ -54,37 +55,186 @@ void Vector() {
 	Print(dVec2N.GetLength());
 }
 
-void CalculateVector() {
-	Print("iVector3");
+void CalculateVector3() {
 	iVector3 ivec1_1(1, 2, 3);
-	Print(ivec1_1.ToString());
+	Print(std::format("iVector3 -> {}", ivec1_1.ToString()));
 	iVector3 ivec2_1(5, 7, 9);
-	Print(ivec2_1.ToString());
+	Print(std::format("iVector3 -> {}", ivec2_1.ToString()));
 	iVector3 ivecr1_1 = ivec1_1 + ivec2_1;
-	Print(ivecr1_1.ToString());
+	Print(std::format("iVector3 + iVector3 -> {}", ivecr1_1.ToString()));
 	iVector3 ivecr2_1 = ivec1_1 - ivec2_1;
-	Print(ivecr2_1.ToString());
+	Print(std::format("iVector3 - iVector3 -> {}", ivecr2_1.ToString()));
 	iVector3 ivecr3_1 = ivec1_1 * ivec2_1;
-	Print(ivecr3_1.ToString());
+	Print(std::format("iVector3 * iVector3 -> {}", ivecr3_1.ToString()));
 	dVector3 ivecr4_1 = ivec1_1 / ivec2_1;
-	Print(ivecr4_1.ToString());
+	Print(std::format("iVector3 / iVector3 -> {}", ivecr4_1.ToString()));
 
 	Print(breakStr);
 
-	Print("iVector3 + dVector3");
 	iVector3 ivec1_2(1, 2, 3);
-	Print(ivec1_2.ToString());
+	Print(std::format("iVector3 -> {}", ivec1_2.ToString()));
 	dVector3 dvec2_2(5.6, 7.3, 9.7);
-	Print(dvec2_2.ToString());
+	Print(std::format("dVector3 -> {}", dvec2_2.ToString()));
 	dVector3 dvecr1_2 = ivec1_2 + dvec2_2;
-	Print(dvecr1_2.ToString());
+	Print(std::format("iVector3 + dVectro3 -> {}", dvecr1_2.ToString()));
 	dVector3 dvecr2_2 = ivec1_2 - dvec2_2;
-	Print(dvecr2_2.ToString());
+	Print(std::format("iVector3 - dVector3 -> {}", dvecr2_2.ToString()));
 	dVector3 dvecr3_2 = ivec1_2 * dvec2_2;
-	Print(dvecr3_2.ToString());
+	Print(std::format("iVector3 * dVector3 -> {}", dvecr3_2.ToString()));
 	dVector3 dvecr4_2 = ivec1_2 / dvec2_2;
-	Print(dvecr4_2.ToString());
+	Print(std::format("iVector3 / dVector3 -> {}", dvecr4_2.ToString()));
+
+	Print(breakStr);
+
+	dVector3 dvec1_3(1.4, 2.3, 3.5);
+	Print(std::format("dVector3 -> {}", dvec1_3.ToString()));
+	iVector3 ivec2_3(5, 7, 9);
+	Print(std::format("iVector3 -> {}", ivec2_3.ToString()));
+	dVector3 dvecr1_3 = dvec1_3 + ivec2_3;
+	Print(std::format("dVector3 + iVectro3 -> {}", dvecr1_3.ToString()));
+	dVector3 dvecr2_3 = dvec1_3 - ivec2_3;
+	Print(std::format("dVector3 - iVector3 -> {}", dvecr2_3.ToString()));
+	dVector3 dvecr3_3 = dvec1_3 * ivec2_3;
+	Print(std::format("dVector3 * iVector3 -> {}", dvecr3_3.ToString()));
+	dVector3 dvecr4_3 = dvec1_3 / ivec2_3;
+	Print(std::format("dVector3 / iVector3 -> {}", dvecr4_3.ToString()));
+
+	Print(breakStr);
+
+	dVector3 dvec1_4(1.4, 2.3, 3.5);
+	Print(std::format("dVector3 -> {}", dvec1_4.ToString()));
+	dVector3 dvec2_4(5.6, 7.3, 9.7);
+	Print(std::format("dVector3 -> {}", dvec2_4.ToString()));
+	dVector3 dvecr1_4 = dvec1_4 + dvec2_4;
+	Print(std::format("dVector3 + dVectro3 -> {}", dvecr1_4.ToString()));
+	dVector3 dvecr2_4 = dvec1_4 - dvec2_4;
+	Print(std::format("dVector3 - dVector3 -> {}", dvecr2_4.ToString()));
+	dVector3 dvecr3_4 = dvec1_4 * dvec2_4;
+	Print(std::format("dVector3 * dVector3 -> {}", dvecr3_4.ToString()));
+	dVector3 dvecr4_4 = dvec1_4 / dvec2_4;
+	Print(std::format("dVector3 / dVector3 -> {}", dvecr4_4.ToString()));
+
 }
+
+void CalculateVector2() {
+	iVector2 ivec1_1(1, 2);
+	Print(std::format("iVector2 -> {}", ivec1_1.ToString()));
+	iVector2 ivec2_1(5, 7);
+	Print(std::format("iVector2 -> {}", ivec2_1.ToString()));
+	iVector2 ivecr1_1 = ivec1_1 + ivec2_1;
+	Print(std::format("iVector2 + iVector2 -> {}", ivecr1_1.ToString()));
+	iVector2 ivecr2_1 = ivec1_1 - ivec2_1;
+	Print(std::format("iVector2 - iVector2 -> {}", ivecr2_1.ToString()));
+	iVector2 ivecr3_1 = ivec1_1 * ivec2_1;
+	Print(std::format("iVector2 * iVector2 -> {}", ivecr3_1.ToString()));
+	dVector2 ivecr4_1 = ivec1_1 / ivec2_1;
+	Print(std::format("iVector2 / iVector2 -> {}", ivecr4_1.ToString()));
+
+	Print(breakStr);
+
+	iVector2 ivec1_2(1, 2);
+	Print(std::format("iVector2 -> {}", ivec1_2.ToString()));
+	dVector2 dvec2_2(5.6, 7.3);
+	Print(std::format("dVector2 -> {}", dvec2_2.ToString()));
+	dVector2 dvecr1_2 = ivec1_2 + dvec2_2;
+	Print(std::format("iVector2 + dVectro2 -> {}", dvecr1_2.ToString()));
+	dVector2 dvecr2_2 = ivec1_2 - dvec2_2;
+	Print(std::format("iVector2 - dVector2 -> {}", dvecr2_2.ToString()));
+	dVector2 dvecr3_2 = ivec1_2 * dvec2_2;
+	Print(std::format("iVector2 * dVector2 -> {}", dvecr3_2.ToString()));
+	dVector2 dvecr4_2 = ivec1_2 / dvec2_2;
+	Print(std::format("iVector2 / dVector2 -> {}", dvecr4_2.ToString()));
+
+	Print(breakStr);
+
+	dVector2 dvec1_3(1.4, 2.3);
+	Print(std::format("dVector2 -> {}", dvec1_3.ToString()));
+	iVector2 ivec2_3(5, 7);
+	Print(std::format("iVector2 -> {}", ivec2_3.ToString()));
+	dVector2 dvecr1_3 = dvec1_3 + ivec2_3;
+	Print(std::format("dVector2 + iVectro2 -> {}", dvecr1_3.ToString()));
+	dVector2 dvecr2_3 = dvec1_3 - ivec2_3;
+	Print(std::format("dVector2 - iVector2 -> {}", dvecr2_3.ToString()));
+	dVector2 dvecr3_3 = dvec1_3 * ivec2_3;
+	Print(std::format("dVector2 * iVector2 -> {}", dvecr3_3.ToString()));
+	dVector2 dvecr4_3 = dvec1_3 / ivec2_3;
+	Print(std::format("dVector2 / iVector2 -> {}", dvecr4_3.ToString()));
+
+	Print(breakStr);
+
+	dVector2 dvec1_4(1.4, 2.3);
+	Print(std::format("dVector2 -> {}", dvec1_4.ToString()));
+	dVector2 dvec2_4(5.6, 7.3);
+	Print(std::format("dVector2 -> {}", dvec2_4.ToString()));
+	dVector2 dvecr1_4 = dvec1_4 + dvec2_4;
+	Print(std::format("dVector2 + dVectro2 -> {}", dvecr1_4.ToString()));
+	dVector2 dvecr2_4 = dvec1_4 - dvec2_4;
+	Print(std::format("dVector2 - dVector2 -> {}", dvecr2_4.ToString()));
+	dVector2 dvecr3_4 = dvec1_4 * dvec2_4;
+	Print(std::format("dVector2 * dVector2 -> {}", dvecr3_4.ToString()));
+	dVector2 dvecr4_4 = dvec1_4 / dvec2_4;
+	Print(std::format("dVector2 / dVector2 -> {}", dvecr4_4.ToString()));
+
+}
+
+void SingleCalculateVector() {
+	dVector3 dvec3(3.7, 5.4, 7.9);
+	Print(std::format("dVector3 -> {}", dvec3.ToString()));
+	dVector3 dvec3_1 = dvec3 * 3;
+	Print(std::format("dVector3 * int -> {}", dvec3_1.ToString()));
+	dVector3 dvec3_2 = dvec3 * 3.7;
+	Print(std::format("dVector3 * double -> {}", dvec3_2.ToString()));
+	dVector3 dvec3_3 = dvec3 / 3;
+	Print(std::format("dVector3 / int -> {}", dvec3_3.ToString()));
+	dVector3 dvec3_4 = dvec3 / 3.7;
+	Print(std::format("dVector3 / double -> {}", dvec3_4.ToString()));
+
+	Print(breakStr);
+
+	iVector3 ivec3(3, 5, 7);
+	Print(std::format("iVector3 -> {}", ivec3.ToString()));
+	iVector3 ivec3_1 = ivec3 * 3;
+	Print(std::format("iVector3 * int -> {}", ivec3_1.ToString()));
+	dVector3 ivec3_2 = ivec3 * 3.7;
+	Print(std::format("iVector3 * double -> {}", ivec3_2.ToString()));
+	dVector3 ivec3_3 = ivec3 / 3;
+	Print(std::format("iVector3 / int -> {}", ivec3_3.ToString()));
+	dVector3 ivec3_4 = ivec3 / 3.7;
+	Print(std::format("iVector3 / double -> {}", ivec3_4.ToString()));
+
+	Print(breakStr);
+
+	dVector2 dvec2(3.7, 5.4);
+	Print(std::format("dVector2 -> {}", dvec2.ToString()));
+	dVector2 dvec2_1 = dvec2 * 3;
+	Print(std::format("dVector2 * int -> {}", dvec2_1.ToString()));
+	dVector2 dvec2_2 = dvec2 * 3.7;
+	Print(std::format("dVector2 * double -> {}", dvec2_2.ToString()));
+	dVector2 dvec2_3 = dvec2 / 3;
+	Print(std::format("dVector2 / int -> {}", dvec2_3.ToString()));
+	dVector2 dvec2_4 = dvec2 / 3.7;
+	Print(std::format("dVector2 / double -> {}", dvec2_4.ToString()));
+
+	Print(breakStr);
+
+	iVector2 ivec2(3, 5);
+	Print(std::format("iVector2 -> {}", ivec2.ToString()));
+	iVector2 ivec2_1 = ivec2 * 3;
+	Print(std::format("iVector2 * int -> {}", ivec2_1.ToString()));
+	dVector2 ivec2_2 = ivec2 * 3.7;
+	Print(std::format("iVector2 * double -> {}", ivec2_2.ToString()));
+	dVector2 ivec2_3 = ivec2 / 3;
+	Print(std::format("iVector2 / int -> {}", ivec2_3.ToString()));
+	dVector2 ivec2_4 = ivec2 / 3.7;
+	Print(std::format("iVector2 / double -> {}", ivec2_4.ToString()));
+}
+
 int main() {
-	CalculateVector();
+	CalculateVector2();
+	Print(breakStr);
+	Print(breakStr);
+	CalculateVector3();
+	Print(breakStr);
+	Print(breakStr);
+	SingleCalculateVector();
 }
