@@ -14,7 +14,7 @@ struct Vector3D;
 struct Vector3I {
 	int x, y, z;
 
-	Vector3I(int X, int Y, int Z);
+	Vector3I(int x, int y, int z);
 	explicit Vector3I(const Vector3F& other);
 	explicit Vector3I(const Vector3D& other);
 
@@ -28,7 +28,7 @@ struct Vector3I {
 struct Vector3F {
 	float x, y, z;
 
-	Vector3F(float X, float Y, float Z);
+	Vector3F(float x, float y, float z);
 	Vector3F(const Vector3I& other);
 	explicit Vector3F(const Vector3D& other);
 
@@ -41,7 +41,7 @@ struct Vector3F {
 struct Vector3D {
 	double x, y, z;
 
-	Vector3D(double X, double Y, double Z);
+	Vector3D(double x, double y, double z);
 	Vector3D(const Vector3I& other);
 	Vector3D(const Vector3F& other);
 
