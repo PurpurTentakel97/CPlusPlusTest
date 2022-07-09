@@ -6,6 +6,7 @@
 #include "../hed/Vector2.h"
 #include <string>
 #include <format>
+#include <cmath>
 
 // Vector3I
 Vector3I::Vector3I(const int X, const  int Y, const  int Z)
@@ -26,10 +27,9 @@ Vector3D Vector3I::Normalize() const {
 	return Vector3D((double)x / length, (double)y / length, (double)z / length);
 }
 const bool Vector3I::HasZero() const {
-	if (x == 0.0f or y == 0.0f or z == 0.0f) {
+	if (x == 0 or y == 0 or z == 0) {
 		return true;
 	}
-
 	return false;
 }
 
@@ -52,10 +52,9 @@ Vector3D Vector3F::Normalize() const {
 	return Vector3D((double)x / length, (double)y / length, (double)z / length);
 }
 const bool Vector3F::HasZero() const {
-	if (x == 0.0 or y == 0.0 or z == 0.0) {
+	if (x == 0.0f or y == 0.0f or z == 0.0f) {
 		return true;
 	}
-
 	return false;
 }
 
@@ -78,12 +77,12 @@ Vector3D Vector3D::Normalize() const {
 	return Vector3D(x / length, y / length, z / length);
 }
 const bool Vector3D::HasZero() const {
-	if (x == 0 or y == 0 or z == 0) {
+	if (x == 0.0 or y == 0.0 or z == 0.0) {
 		return true;
 	}
-
 	return false;
 }
+
 
 // operator
 // +
