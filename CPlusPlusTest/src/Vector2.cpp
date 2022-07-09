@@ -118,23 +118,23 @@ Vector3D operator* (const Vector3D& first, const Vector3D& second) {
 	return Vector3D(first.x * second.x, first.y * second.y, first.z * second.z);
 }
 
-Vector3I operator* (const Vector3I& vector, const int i) {
+Vector3I operator* (const Vector3I& vector, const int& i) {
 	return Vector3I(vector.x * i, vector.y * i, vector.z * i);
 }
-Vector3F operator* (const Vector3F& vector, const float f) {
+Vector3F operator* (const Vector3F& vector, const float& f) {
 	return Vector3F(vector.x * f, vector.y * f, vector.z * f);
 }
-Vector3D operator* (const Vector3D& vector, const double d) {
+Vector3D operator* (const Vector3D& vector, const double& d) {
 	return Vector3D(vector.x * d, vector.y * d, vector.z * d);
 }
 
-Vector3I operator* (const int i, const Vector3I& vector) {
+Vector3I operator* (const int& i, const Vector3I& vector) {
 	return vector * i;
 }
-Vector3F operator* (const float f, const Vector3F& vector) {
+Vector3F operator* (const float& f, const Vector3F& vector) {
 	return vector * f;
 }
-Vector3D operator* (const double d, const Vector3D& vector) {
+Vector3D operator* (const double& d, const Vector3D& vector) {
 	return vector * d;
 }
 
@@ -158,38 +158,38 @@ Vector3D operator/ (const Vector3D& first, const Vector3D& second) {
 	return Vector3D(first.x / second.x, first.y / second.y, first.z / second.z);
 }
 
-Vector3I operator/ (const Vector3I& vector, const int i) {
+Vector3I operator/ (const Vector3I& vector, const int& i) {
 	if (i == 0) {
 		throw std::invalid_argument("Devide by Zero");
 	}
 	return Vector3I(vector.x / i, vector.y / i, vector.z / i);
 }
-Vector3F operator/ (const Vector3F& vector, const float f) {
+Vector3F operator/ (const Vector3F& vector, const float& f) {
 	if (f == 0.0f) {
 		throw std::invalid_argument("Devide by Zero");
 	}
 	return Vector3F(vector.x / f, vector.y / f, vector.z / f);
 }
-Vector3D operator/ (const Vector3D& vector, const double d) {
+Vector3D operator/ (const Vector3D& vector, const double& d) {
 	if (d == 0.0) {
 		throw std::invalid_argument("Devide by Zero");
 	}
 	return Vector3D(vector.x / d, vector.y / d, vector.z / d);
 }
 
-Vector3I operator/ (const int i, const Vector3I& vector) {
+Vector3I operator/ (const int& i, const Vector3I& vector) {
 	if (vector.HasZero()) {
 		throw std::invalid_argument("Devide by Zero");
 	}
 	return Vector3I(i / vector.x, i / vector.y, i / vector.z);
 }
-Vector3F operator/ (const float f, const Vector3F& vector) {
+Vector3F operator/ (const float& f, const Vector3F& vector) {
 	if (vector.HasZero()) {
 		throw std::invalid_argument("Devide by Zero");
 	}
 	return Vector3F(f / vector.x, f / vector.y, f / vector.z);
 }
-Vector3D operator/ (const double d, const Vector3D& vector) {
+Vector3D operator/ (const double& d, const Vector3D& vector) {
 	if (vector.HasZero()) {
 		throw std::invalid_argument("Devide by Zero");
 	}
