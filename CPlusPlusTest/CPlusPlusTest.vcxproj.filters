@@ -33,9 +33,6 @@
     <ClCompile Include="src\Log.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="src\Vector.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
     <ClCompile Include="src\Vector2.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
@@ -54,9 +51,6 @@
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="hed\Log.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="hed\Vector.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="hed\Vector2.h">

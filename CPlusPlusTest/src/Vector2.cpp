@@ -12,9 +12,9 @@
 Vector3I::Vector3I(const int x, const  int y, const  int z)
 	: x(x), y(y),z(z) {}
 Vector3I::Vector3I(const Vector3F& other)
-	: x((int)other.x),y((int)other.y),z((int)other.z) {}
+	: x(static_cast<int>(other.x)),y(static_cast<int>(other.y)),z(static_cast<int>(other.z)) {}
 Vector3I::Vector3I(const Vector3D& other)
-	: x((int)other.x), y((int)other.y), z((int)other.z) {}
+	: x(static_cast<int>(other.x)), y(static_cast<int>(other.y)), z(static_cast<int>(other.z)) {}
 
 std::string Vector3I::ToString() const {
 	return std::format("Vector3I -> X:{} / Y:{} / Z:{}", x, y, z);
@@ -24,7 +24,7 @@ double Vector3I::Length() const {
 }
 Vector3D Vector3I::Normalize() const {
 	double length = Length();
-	return Vector3D((double)x / length, (double)y / length, (double)z / length);
+	return Vector3D(static_cast<double>(x) / length, static_cast<double>(y) / length, static_cast<double>(z) / length);
 }
 const bool Vector3I::HasZero() const {
 	if (x == 0 or y == 0 or z == 0) {
@@ -37,9 +37,9 @@ const bool Vector3I::HasZero() const {
 Vector3F::Vector3F(const float x ,const float y, const float z)
 	: x(x), y(y), z(z) {}
 Vector3F::Vector3F(const Vector3I& other)
-	: x((float)other.x), y((float)other.y), z((float)other.z) {}
+	: x(static_cast<float>(other.x)), y(static_cast<float>(other.y)), z(static_cast<float>(other.z)) {}
 Vector3F::Vector3F(const Vector3D& other)
-	: x((float)other.x), y((float)other.y), z((float)other.z) {}
+	: x(static_cast<float>(other.x)), y(static_cast<float>(other.y)), z(static_cast<float>(other.z)) {}
 
 std::string Vector3F::ToString() const {
 	return std::format("Vector3F -> X:{} / Y:{} / Z:{}", x, y, z);
@@ -49,7 +49,7 @@ double Vector3F::Length() const {
 }
 Vector3D Vector3F::Normalize() const {
 	double length = Length();
-	return Vector3D((double)x / length, (double)y / length, (double)z / length);
+	return Vector3D(static_cast<double>(x) / length, static_cast<double>(y) / length, static_cast<double>(z) / length);
 }
 const bool Vector3F::HasZero() const {
 	if (x == 0.0f or y == 0.0f or z == 0.0f) {
@@ -62,9 +62,9 @@ const bool Vector3F::HasZero() const {
 Vector3D::Vector3D(const double x, const double y, const double z)
 	: x(x), y(y), z(z) {}
 Vector3D::Vector3D(const Vector3I& other)
-	: x((double)other.x),y((double)other.y),z((double)other.z) {}
+	: x(static_cast<double>(other.x)),y(static_cast<double>(other.y)),z(static_cast<double>(other.z)) {}
 Vector3D::Vector3D(const Vector3F& other)
-	: x((double)other.x), y((double)other.y), z((double)other.z) {}
+	: x(static_cast<double>(other.x)), y(static_cast<double>(other.y)), z(static_cast<double>(other.z)) {}
 
 std::string Vector3D::ToString() const {
 	return std::format("Vector3D -> X:{} / Y:{} / Z:{}", x, y, z);

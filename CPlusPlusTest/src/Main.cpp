@@ -16,8 +16,8 @@ void Vector() {
 	Print(ivec3_1.Length());
 	Print(ivec3_1.Normalize().ToString());
 	Print(ivec3_1.Normalize().Length());
-	Print(((Vector3F)ivec3_1).ToString());
-	Print(((Vector3D)ivec3_1).ToString());
+	Print((static_cast<Vector3F>(ivec3_1)).ToString());
+	Print((static_cast<Vector3D>(ivec3_1)).ToString());
 
 	Print(breakStr);
 
@@ -26,8 +26,8 @@ void Vector() {
 	Print(fvec3_2.Length());
 	Print(fvec3_2.Normalize().ToString());
 	Print(fvec3_2.Normalize().Length());
-	Print(((Vector3I)fvec3_2).ToString());
-	Print(((Vector3D)fvec3_2).ToString());
+	Print((static_cast<Vector3I>(fvec3_2)).ToString());
+	Print((static_cast<Vector3D>(fvec3_2)).ToString());
 
 	Print(breakStr);
 
@@ -36,8 +36,8 @@ void Vector() {
 	Print(dvec3_3.Length());
 	Print(dvec3_3.Normalize().ToString());
 	Print(dvec3_3.Normalize().Length());
-	Print(((Vector3I)dvec3_3).ToString());
-	Print(((Vector3F)dvec3_3).ToString());
+	Print((static_cast<Vector3I>(dvec3_3)).ToString());
+	Print((static_cast<Vector3D>(dvec3_3)).ToString());
 }
 
 void CalculateVector3() {
@@ -150,14 +150,14 @@ void SingleCalculateVector() {
 		Print(breakStr);
 
 		Print((ivec3 * 3).ToString());
-		Print(((Vector3F)ivec3 * 3.7f).ToString());
-		Print(((Vector3D)ivec3 * 3.6).ToString());
+		Print((static_cast<Vector3F>(ivec3) * 3.7f).ToString());
+		Print((static_cast<Vector3D>(ivec3) * 3.6).ToString());
 
 		Print(breakStr);
 
 		Print((fvec3 * 3).ToString());
 		Print((fvec3 * 3.7f).ToString());
-		Print(((Vector3D)fvec3 * 3.6).ToString());
+		Print((static_cast<Vector3D>(fvec3) * 3.6).ToString());
 
 		Print(breakStr);
 
@@ -171,14 +171,14 @@ void SingleCalculateVector() {
 		Print(breakStr);
 
 		Print((3 * ivec3).ToString());
-		Print((3.7f * (Vector3F)ivec3).ToString());
-		Print((3.6 * (Vector3D)ivec3).ToString());
+		Print((3.7f * static_cast<Vector3F>(ivec3)).ToString());
+		Print((3.6 * static_cast<Vector3D>(ivec3)).ToString());
 
 		Print(breakStr);
 
 		Print((3 * fvec3).ToString());
 		Print((3.7f * fvec3).ToString());
-		Print((3.6 * (Vector3D)fvec3).ToString());
+		Print((3.6 * static_cast<Vector3D>(fvec3)).ToString());
 
 		Print(breakStr);
 
@@ -192,14 +192,14 @@ void SingleCalculateVector() {
 		Print(breakStr);
 
 		Print((ivec3 / 3).ToString());
-		Print(((Vector3F)ivec3 / 3.7f).ToString());
-		Print(((Vector3D)ivec3 / 3.6).ToString());
+		Print((static_cast<Vector3F>(ivec3) / 3.7f).ToString());
+		Print((static_cast<Vector3D>(ivec3) / 3.6).ToString());
 
 		Print(breakStr);
 
 		Print((fvec3 / 3).ToString());
 		Print((fvec3 / 3.7f).ToString());
-		Print(((Vector3D)fvec3 / 3.6).ToString());
+		Print((static_cast<Vector3D>(fvec3) / 3.6).ToString());
 
 		Print(breakStr);
 
@@ -213,14 +213,14 @@ void SingleCalculateVector() {
 		Print(breakStr);
 
 		Print((3 / ivec3).ToString());
-		Print((3.7f / (Vector3F)ivec3).ToString());
-		Print((3.6 / (Vector3D)ivec3).ToString());
+		Print((3.7f / static_cast<Vector3F>(ivec3)).ToString());
+		Print((3.6 / static_cast<Vector3D>(ivec3)).ToString());
 
 		Print(breakStr);
 
 		Print((3 / fvec3).ToString());
 		Print((3.7f / fvec3).ToString());
-		Print((3.6 / (Vector3D)fvec3).ToString());
+		Print((3.6 / static_cast<Vector3D>(fvec3)).ToString());
 
 		Print(breakStr);
 
@@ -319,13 +319,13 @@ void Error() {
 			Print(std::format("ivec / int -> {}", e.what()));
 		}
 		try {
-			Print(((Vector3F)ivec3 / 0.0f).ToString());
+			Print((static_cast<Vector3F>(ivec3) / 0.0f).ToString());
 		}
 		catch (std::invalid_argument e) {
 			Print(std::format("ivec / float -> {}", e.what()));
 		}
 		try {
-			Print(((Vector3D)ivec3 / 0.0).ToString());
+			Print((static_cast<Vector3D>(ivec3) / 0.0).ToString());
 		}
 		catch (std::invalid_argument e) {
 			Print(std::format("ivec / double -> {}", e.what()));
@@ -348,7 +348,7 @@ void Error() {
 			Print(std::format("fvec / float -> {}", e.what()));
 		}
 		try {
-			Print(((Vector3D)fvec3 / 0.0).ToString());
+			Print((static_cast<Vector3D>(fvec3) / 0.0).ToString());
 		}
 		catch (std::invalid_argument e) {
 			Print(std::format("fvec / double -> {}", e.what()));
@@ -388,13 +388,13 @@ void Error() {
 			Print(std::format("int / ivec -> {}", e.what()));
 		}
 		try {
-			Print((0.0f / (Vector3F)ivec3).ToString());
+			Print((0.0f / static_cast<Vector3F>(ivec3)).ToString());
 		}
 		catch (std::invalid_argument e) {
 			Print(std::format("float / ivec -> {}", e.what()));
 		}
 		try {
-			Print((0.0 / (Vector3D)ivec3).ToString());
+			Print((0.0 / static_cast<Vector3D>(ivec3)).ToString());
 		}
 		catch (std::invalid_argument e) {
 			Print(std::format("double / ivec -> {}", e.what()));
@@ -417,7 +417,7 @@ void Error() {
 			Print(std::format("float / fvec -> {}", e.what()));
 		}
 		try {
-			Print((0.0 / (Vector3D)fvec3).ToString());
+			Print((0.0 / static_cast<Vector3D>(fvec3)).ToString());
 		}
 		catch (std::invalid_argument e) {
 			Print(std::format("double / fvec -> {}", e.what()));
@@ -448,7 +448,7 @@ void Error() {
 	}
 }
 
-int main() {
+void Calulating() {
 	Print(breakStr + "\n" + breakStr);
 	Print("\t\t\tVector");
 	Print(breakStr + "\n" + breakStr);
@@ -468,5 +468,19 @@ int main() {
 	Print("\t\t\tError");
 	Print(breakStr + "\n" + breakStr);
 	Error();
+}
 
+
+void Pointing() {
+	Vector3I ivec3(2, 5, 4);
+	Vector3I* ptr = &ivec3;
+
+	Print((*ptr).ToString());
+	Print(ptr->ToString());
+}
+
+
+int main() {
+	Calulating();
+	// Pointing();
 }
